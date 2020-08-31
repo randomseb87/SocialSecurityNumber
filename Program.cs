@@ -7,13 +7,22 @@ namespace SocialSecurityNumber
     {
         static void Main(string[] args)
         {
-            while (true)
-            {
 
+            string socialSecurityNumber;
+
+            if (args.Length > 0)
+            {
+                Console.WriteLine($"You provided: {args[0]}");
+                socialSecurityNumber = args[0];
+            }
+
+            else
+            {
+                Console.WriteLine("Please input your social security number (YYMMDD-XXXX): ");
+                socialSecurityNumber = Console.ReadLine();
+            }
              
             Console.Write("Social Security Number (YYMMDD-XXXX): ");
-
-            string socialSecurityNumber = Console.ReadLine();
 
             string gender = "Female";
 
@@ -37,8 +46,10 @@ namespace SocialSecurityNumber
 
             Console.WriteLine($"This person is {gender}, age {age}.");
 
+                
 
-            }
+
+            
         }
     }
 }
