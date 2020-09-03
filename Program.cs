@@ -21,8 +21,6 @@ namespace SocialSecurityNumber
                 Console.WriteLine("Please input your social security number (YYMMDD-XXXX): ");
                 socialSecurityNumber = Console.ReadLine();
             }
-             
-            Console.Write("Social Security Number (YYMMDD-XXXX): ");
 
             string gender = "Female";
 
