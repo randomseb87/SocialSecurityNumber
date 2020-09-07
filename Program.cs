@@ -80,13 +80,11 @@ namespace SocialSecurityNumber
             {
                 generation = "Generation Alpha";
             }
+
             Console.WriteLine($"{"SSN: ",-15}{socialSecurityNumber}");
             Console.WriteLine($"{"Gender: ",-15}{gender}");
             Console.WriteLine($"{"Age: ", -15}{age}");
             Console.WriteLine($"{"Generation: ", -15}{generation}");
-
-
-
         }
     }
 }
