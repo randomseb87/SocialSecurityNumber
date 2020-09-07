@@ -9,29 +9,29 @@ namespace SocialSecurityNumber
     {
         static void Main(string[] args)
         {
+            string firstName;
+            string lastName;
             string socialSecurityNumber;
             string generation = "";
-
+            
             if (args.Length > 0)
             {
-                socialSecurityNumber = args[1];
+                firstName = args[0];
+                lastName = args[1];
+                socialSecurityNumber = args[2];
             }
             else
             {
-                Console.Write("Please enter your first and last name: ");
-                var fullName = Console.ReadLine();
-                var fullNameSplit = fullName.Split(new char[] { ' ' }, 2);
+                Console.Write("Please enter your first name: ");
+                firstName = Console.ReadLine();
 
-                string firstName = fullNameSplit[0];
-                string lastName = fullNameSplit[1];
+                Console.Write("Please enter your last name: ");
+                lastName = Console.ReadLine();
 
                 Console.Write("Please enter your social security number (YYYYMMDD-XXXX): ");
                 socialSecurityNumber = Console.ReadLine();
 
-                Console.Clear();
-
-                Console.WriteLine($"{"First Name: ", -15}{firstName}");
-                Console.WriteLine($"{"Last Name: ", -15}{lastName}");
+                Console.Clear();  
             }
 
             string gender = "Female";
@@ -81,6 +81,8 @@ namespace SocialSecurityNumber
                 generation = "Generation Alpha";
             }
 
+            Console.WriteLine($"{"First Name: ",-15}{firstName}");
+            Console.WriteLine($"{"Last Name: ",-15}{lastName}");
             Console.WriteLine($"{"SSN: ",-15}{socialSecurityNumber}");
             Console.WriteLine($"{"Gender: ",-15}{gender}");
             Console.WriteLine($"{"Age: ", -15}{age}");
